@@ -1,1 +1,1 @@
-# Pincet
+# Test-task-for-Paradigma
