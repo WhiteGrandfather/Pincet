@@ -1,0 +1,165 @@
+.capture-block {
+  position: relative;
+
+  background-image:
+    url("../img/girl.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 45.208vw 39.583vw;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 17.760vw;
+    left: 36.510vw;
+    z-index: -1;
+
+    width: 44.427vw;
+    height: 27.135vw;
+
+    background-image: url("../img/Card.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.capture-block__title {
+  padding-top: 3.854vw;
+  padding-left: 15.365vw;
+
+  font-size: 2.500vw;
+  font-weight: 300;
+  line-height: 2.865vw;
+}
+
+.capture-block__title span {
+  font-weight: 700;
+}
+
+.capture-block__container {
+  display: flex;
+
+  padding-left: 15.365vw;
+  padding-bottom: 2.708vw;
+}
+
+.capture-block__advantages {
+  padding-top: 0.677vw;
+  padding-bottom: 2.760vw;
+
+}
+
+.capture-block__advantage {
+  position: relative;
+
+  padding: 0 1.979vw;
+
+  font-size: 0.938vw;
+  line-height: 1.875vw;
+  letter-spacing: 0.025em;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0.625vw;
+    left: 0.417vw;
+
+    width: 0.417vw;
+    height: 0.417vw;
+
+    background-color: #ef9499;
+    border: 0.208vw solid #f7f7fb;
+    border-radius: 50%;
+    box-shadow: 0 0.052vw 0.677vw rgba(239, 148, 153, 0.38);
+  }
+}
+
+.capture-block__button-wrapper {
+  width: 25.521vw;
+}
+
+.capture-block__card {
+  width: 44.427vw;
+  padding-top: 10.39vw;
+  padding-left: 10.99vw;
+}
+
+.capture-block__card-button-container {
+  position: relative;
+
+  width: 42px;
+}
+
+.capture-block__card-button {
+  width: 41px;
+  height: 41px;
+
+  font-family: "Appetite New", "Arial", sans-serif;
+  font-size: 20px;
+  color: @font-white;
+  text-shadow: 0 0 2px #eb8588;
+
+  background-image: linear-gradient( 135deg, #fcb8b9 0%, #ea898f 90%, #d7757a 90%);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+
+  animation: radial-pulse 1.8s infinite;
+}
+
+.capture-block__card-board {
+  position: absolute;
+  left: 0.09vw;
+  bottom: 0.30vw;
+
+  display: none;
+
+  width: 10.833vw;
+  height: 12.552vw;
+  padding: 1.55vw 2.135vw;
+
+  background-image: url("../img/Rectangle.png");
+  background-repeat: no-repeat;
+}
+
+.capture-block__card-button-container:hover .capture-block__card-board {
+  display: block
+}
+
+.capture-block__card-text {
+  font-size: 0.729vw;
+  line-height: 0.89vw;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+.capture-block__wave {
+  position: relative;
+
+  width: 100%;
+  height: 8.60vw;
+
+  background-image: url("../img/icon-wave.svg");
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-size: 100vw 9.20vw;
+}
+
+.capture-block__wave-arrow {
+  position: absolute;
+  top: -1.875vw;
+  left: 46.563vw;
+
+  width: 6.823vw;
+  height: 6.823vw;
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 151, 155, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 12px 25px rgba(0, 0, 0, 0);
+  }
+}

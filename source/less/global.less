@@ -1,10 +1,60 @@
 @font-face {
-  font-family: "Philosopher";
+  font-family: "Appetite New";
   src:
-    url("../fonts/Philosopher-Italic.woff2") format("woff2"),
-    url("../fonts/Philosopher-Italic.woff") format("woff");
+    url("../fonts/Appetite_New.woff2") format("woff2"),
+    url("../fonts/Appetite_New.woff") format("woff");
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:
+    url("../fonts/MUSEOSANSCYRL100.woff2") format("woff2"),
+    url("../fonts/MUSEOSANSCYRL100.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:
+    url("../fonts/MUSEOSANSCYRL300.woff2") format("woff2"),
+    url("../fonts/MUSEOSANSCYRL300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:
+    url("../fonts/MUSEOSANSCYRL500.woff2") format("woff2"),
+    url("../fonts/MUSEOSANSCYRL500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:
+    url("../fonts/MUSEOSANSCYRL700.woff2") format("woff2"),
+    url("../fonts/MUSEOSANSCYRL700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src:
+    url("../fonts/MUSEOSANSCYRL900.woff2") format("woff2"),
+    url("../fonts/MUSEOSANSCYRL900.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -15,21 +65,40 @@ body {
 
   // Временно для сетки
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 1920px;
   //
 
-  font-family: "Geometria", "Arial", sans-serif;
-  font-weight: 400;
-  color: @color-black;
+  font-family: "Museo Sans Cyrl", "Arial", sans-serif;
+  font-weight: 300;
+  color: @font-black;
 
-  // Временно
-  // background-color: #f7e611;
+  background-color: #ffffff;
+  background-image: url("../img/background-layer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
   vertical-align: bottom;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
