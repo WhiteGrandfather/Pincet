@@ -130,14 +130,15 @@
     <footer class="main__page-footer page-footer"></footer>
 
     <div class="main__cloud-animation cloud-animation">
-      <img class="cloud-animation__image cloud-animation__image--1" src="img/icon-cloud-1.png" width="367" height="340" alt="Cloud-image">
-      <img class="cloud-animation__image cloud-animation__image--2" width="287" height="266" src="img/icon-cloud-2.png" alt="Cloud-image">
+      <img data-speed="50" class="cloud-animation__image cloud-animation__image--1" src="img/icon-cloud-1.png" width="367" height="340" alt="Cloud-image">
+
+      <img data-speed="10" class="cloud-animation__image cloud-animation__image--2" width="287" height="266" src="img/icon-cloud-2.png" alt="Cloud-image">
     </div>
   </div>
 
-  <div class="main-block__popup popup">
-    <div class="popup__container">
-      <form action="#" method="POST" class="popup__form">
+  <div class="popup popup--closed">
+    <div class="popup__form-window">
+      <form class="popup__form" action="#" method="POST">
         <h2 class="popup__title"><span>Получите</span> программу обучения</h2>
         <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim<br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
         <ul class="popup__list">
@@ -159,12 +160,20 @@
         <button class="popup__button-close" type="button"></button>
       </form>
     </div>
+    <div class="popup__success-window popup__success-window--closed">
+      <h2 class="popup__success-title">Ваш заказ принят.</h2>
+      <p class="popup__success-text">Ожидайте звонка</p>
+      <button class="popup__button-close popup__button-close--success" type="button"></button>
+    </div>
   </div>
-  </body>
 
+  </body>
 
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
+
+  <script src="js/animation.js"></script>
+  <script src="js/main.js"></script>
 
 </html>

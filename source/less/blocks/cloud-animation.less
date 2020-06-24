@@ -1,3 +1,10 @@
+.cloud-animation {
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
 .cloud-animation__image {
   position: absolute;
   z-index: -1;
@@ -8,6 +15,8 @@
 
     width: 19.115vw;
     height: 17.708vw;
+
+    animation: cloud-left-show 1s;
   }
 
   &--2 {
@@ -16,5 +25,7 @@
 
     width: 14.948vw;
     height: 13.854vw;
+
+    animation: cloud-right-show 1s;
   }
 }

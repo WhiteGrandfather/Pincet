@@ -91,6 +91,9 @@
 }
 
 .capture-block__card-button {
+  position: relative;
+  z-index: 1;
+
   width: 41px;
   height: 41px;
 
@@ -104,7 +107,7 @@
   outline: none;
   cursor: pointer;
 
-  animation: radial-pulse 1.8s infinite;
+  .radial-pulse;
 }
 
 .capture-block__card-board {
@@ -120,10 +123,13 @@
 
   background-image: url("../img/Rectangle.png");
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .capture-block__card-button-container:hover .capture-block__card-board {
-  display: block
+  display: block;
+
+  .slow-show;
 }
 
 .capture-block__card-text {
@@ -152,14 +158,4 @@
 
   width: 6.823vw;
   height: 6.823vw;
-}
-
-@keyframes radial-pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(240, 151, 155, 0.5);
-  }
-
-  100% {
-    box-shadow: 0 0 12px 25px rgba(0, 0, 0, 0);
-  }
 }

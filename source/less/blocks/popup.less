@@ -2,8 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  display: none;
+  z-index: 20;
 
   width: 100vw;
   max-width: 100%;
@@ -11,12 +10,12 @@
 
   background-color: rgba(0, 0, 0, 0.5);
 
-  &--active {
-    display: block;
+  &--closed {
+    display: none;
   }
 }
 
-.popup__container {
+.popup__form-window {
   position: relative;
   top: 50%;
   left: 50%;
@@ -25,9 +24,14 @@
   width: 38.438vw;
   height: 34.792vw;
 
+  background-color: @background-white;
   background-image: linear-gradient( 45deg, #fdf3ef 0%, #fcfdfd 100%);
   border-radius: 2.604vw;
   box-shadow: 0 0 0.104vw 0.104vw #fbf4f4;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .popup__form {
@@ -139,4 +143,79 @@
   &:hover {
     opacity: 1;
   }
+
+  &--success {
+    top: 1.3vw;
+    right: 1.398vw;
+  }
+}
+
+.popup__success-window {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 27.188vw;
+  height: 17.188vw;
+  padding: 3.958vw 5.208vw;
+
+  background-color: @background-white;
+  background-image: linear-gradient( 45deg, #fdf3ef 0%, #fcfdfd 100%);
+  border-radius: 2.604vw;
+  overflow: hidden;
+
+  &--closed {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40%;
+    right: -75%;
+    transform: translateX(-50%);
+
+    width: 319px;
+    height: 328px;
+
+    background-image:
+      url("../img/leaf-close.png"),
+      url("../img/icon-cloud-1.png");
+    background-repeat: no-repeat;
+    background-position: 3.7% 10%, center;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5.2%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 10.781vw;
+    height: 10.781vw;
+
+    background-image: url("../img/tick.png");
+  }
+}
+
+.popup__success-title {
+  margin: 0;
+  padding-top: 5.78vw;
+  padding-bottom: 0.12vw;
+
+  font-size: 1.563vw;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+
+.popup__success-text {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.563vw;
+  letter-spacing: 0.025em;
+  text-align: center;
 }
