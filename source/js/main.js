@@ -4,10 +4,10 @@
   var ESC_KEY = 'Escape';
 
   var buttonWrapperElement = document.querySelector('.capture-block__button-wrapper');
-  var buttonElement = buttonWrapperElement.querySelector('.button');
   var popupElement = document.querySelector('.popup');
   var formWindowElement = popupElement.querySelector('.popup__form-window');
   var SuccessWindowElement = popupElement.querySelector('.popup__success-window');
+  var toggleElement = document.querySelector('.nav__toggle');
 
   var onPopupAreaClick = function (event) {
     if(event.target.classList.contains('popup')) {
@@ -33,14 +33,16 @@
   };
 
   var onPopupOpen = function (event) {
-    popupElement.classList.remove('popup--closed');
+    if (event.target.classList.contains('capture-block__button') || event.target.classList.contains('contacts__callback-button')) {
+      popupElement.classList.remove('popup--closed');
 
-    buttonElement.removeEventListener('click', onPopupOpen);
-    document.removeEventListener('mousemove', window.animation);
-    popupElement.addEventListener('click', onPopupButtonClose);
-    document.addEventListener('keydown', onEscPopupClose);
-    popupElement.addEventListener('click', onPopupAreaClick);
-    popupElement.addEventListener('submit', onFormSend);
+      document.removeEventListener('click', onPopupOpen);
+      document.removeEventListener('mousemove', window.animation);
+      popupElement.addEventListener('click', onPopupButtonClose);
+      document.addEventListener('keydown', onEscPopupClose);
+      popupElement.addEventListener('click', onPopupAreaClick);
+      popupElement.addEventListener('submit', onFormSend);
+    }
   };
 
   var onPopupClose = function (event) {
@@ -51,7 +53,7 @@
       SuccessWindowElement.classList.add('popup__success-window');
     };
 
-    buttonElement.addEventListener('click', onPopupOpen);
+    document.addEventListener('click', onPopupOpen);
     document.addEventListener('mousemove', window.animation);
     popupCloseButtonElement.removeEventListener('click', onPopupClose);
     document.removeEventListener('keydown', onEscPopupClose);
@@ -65,6 +67,12 @@
     formWindowElement.classList.add('popup__form-window--closed');
   };
 
-  document.addEventListener('mousemove', window.animation);
-  buttonElement.addEventListener('click', onPopupOpen);
+
+  if (window.matchMedia('(min-width: 992px)').matches){
+    document.addEventListener('mousemove', window.animation);
+  } else {
+    toggleElement.addEventListener('click', window.toggle);
+  };
+
+  document.addEventListener('click', onPopupOpen);
 })();

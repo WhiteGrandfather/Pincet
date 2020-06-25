@@ -10,8 +10,8 @@
   z-index: -1;
 
   &--1 {
-    top: 280px;
-    left: 116px;
+    top: 14.583vw;
+    left: 6.042vw;
 
     width: 19.115vw;
     height: 17.708vw;
@@ -20,12 +20,18 @@
   }
 
   &--2 {
-    top: 83px;
-    right: -140px;
+    top: 4.323vw;
+    right: -7.292vw;
 
     width: 14.948vw;
     height: 13.854vw;
 
     animation: cloud-right-show 1s;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .cloud-animation__image {
+    animation: none;
   }
 }

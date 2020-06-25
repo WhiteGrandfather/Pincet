@@ -85,20 +85,20 @@
 .capture-block__card-button-container {
   position: relative;
 
-  width: 42px;
+  width: 2.188vw;
 }
 
 .capture-block__card-button {
   position: relative;
   z-index: 1;
 
-  width: 41px;
-  height: 41px;
+  width: 2.135vw;
+  height: 2.135vw;
 
   font-family: "Appetite New", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 1.042vw;
   color: @font-white;
-  text-shadow: 0 0 2px #eb8588;
+  text-shadow: 0 0 0.104vw #eb8588;
 
   background-image: linear-gradient(135deg, #fcb8b9 0%, #ea898f 90%, #d7757a 90%);
   border-radius: 50%;
@@ -121,6 +121,7 @@
 
   background-image: url("../img/Rectangle.png");
   background-repeat: no-repeat;
+  background-size: contain;
   cursor: pointer;
 }
 
@@ -132,7 +133,6 @@
 
 .capture-block__card-text {
   font-size: 0.729vw;
-  line-height: 0.89vw;
   letter-spacing: 0.12em;
   text-align: center;
 }
@@ -156,4 +156,65 @@
 
   width: 6.823vw;
   height: 6.823vw;
+}
+
+@media (max-width: @tablet-width) {
+  .capture-block::after {
+    top: 22vw;
+  }
+
+  .capture-block__card {
+    padding-top: 110px;
+    padding-left: 51px;
+  }
+
+  .capture-block__advantage {
+    font-size: 8.5px;
+  }
+}
+
+@media (max-width: 555px) {
+  .capture-block {
+    background-image: none;
+  }
+}
+
+
+@media (max-width: @mobile-width) {
+  .capture-block {
+    padding-top: 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .capture-block__title {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .capture-block__advantage {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+
+    &::before {
+      top: 50%;
+      left: -5px;
+      transform: translateY(-50%);
+
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  .capture-block__card {
+    display: none;
+  }
+
+  .capture-block__button-wrapper {
+    width: 100%;
+    padding-top: 50px;
+  }
 }

@@ -62,3 +62,38 @@
     opacity: 1;
   }
 }
+
+@media (max-width: @tablet-width) {
+  .button {
+    font-size: 7px;
+
+    &::after {
+      right: -5px;
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .button {
+    width: 80%;
+    height: auto;
+    padding: 5px;
+
+    font-size: 14px;
+
+    &::after {
+      left: 65%;
+      width: 100px;
+      height: 50px;
+    }
+
+    &--form {
+      width: 100%;
+      height: 50px;
+    }
+
+    &--form::after {
+      top: 50%;
+    }
+  }
+}

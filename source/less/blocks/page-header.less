@@ -14,3 +14,24 @@
   width: 100%;
   padding: 0 0.781vw;
 }
+
+@media (max-width: @tablet-width) {
+  .page-header {
+    width: 98%;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .page-header {
+    flex-direction: column-reverse;
+
+    padding-top: 45px;
+  }
+
+  .page-header__top-wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 7px;
+  }
+}
