@@ -236,12 +236,16 @@
     height: 10px;
     background-size: cover;
   }
+
+  .popup__success-window {
+    height: auto;
+  }
 }
 
 @media (max-width: @mobile-width) {
   .popup__form-window {
     width: 80%;
-    height: 80%;
+    height: auto;
   }
 
   .popup__form::before {
@@ -281,7 +285,6 @@
 
   .popup__success-window {
     width: 80%;
-    height: 30%;
 
     &::before {
       display: none;
